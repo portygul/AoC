@@ -114,7 +114,7 @@ function findLastWordInLine( line : string ) : DigitWithIndex
 
     for( let i = 1; i < digitWordArray.length; i++ )
     {
-        const indexOfCurrentWord: number = line.indexOf( digitWordArray[ i ] );
+        const indexOfCurrentWord: number = line.lastIndexOf( digitWordArray[ i ] );
 
         if( indexOfCurrentWord != -1 && indexOfCurrentWord > lastWordWithIndex.index )
         {
