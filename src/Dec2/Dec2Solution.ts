@@ -3,7 +3,7 @@ import { readLines } from "../Reuseable/utils.ts";
 
 const inputLines: string[] = await readLines('InputPath.txt');
 
-answerTheElf(inputLines, 12, 13, 14);
+answerTheElf( inputLines, 12, 13, 14 );
 
 function answerTheElf( lines: string[], red: number, green: number, blue: number ): void
 {
@@ -12,7 +12,7 @@ function answerTheElf( lines: string[], red: number, green: number, blue: number
 
     lines.forEach( line => {
 
-        const minRoundSpecs : BallGameMinSpecs = { "id": 0, "red": 0, "blue": 0, "green": 0 };
+        const minRoundSpecs : BallGameMinSpecs = { id: 0, red: 0, blue: 0, green: 0 };
         minRoundSpecs.id = parseInt(""+line.match(/[0-9]+/));
         
         const ballCountRegex = /[0-9]+ [a-z]+/g;
