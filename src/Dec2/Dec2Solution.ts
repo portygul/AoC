@@ -7,8 +7,8 @@ answerTheElf( inputLines, 12, 13, 14 );
 
 function answerTheElf( lines: string[], red: number, green: number, blue: number ): void
 {
-    let idSum: number = 0;
-    let gameSetPowerSum: number = 0;
+    let validGameIdsSum: number = 0;
+    let gameSetsPowerSum: number = 0;
 
     lines.forEach( line => {
 
@@ -31,10 +31,10 @@ function answerTheElf( lines: string[], red: number, green: number, blue: number
         
         if( !( minRoundSpecs.red > red  || minRoundSpecs.green > green || minRoundSpecs.blue > blue ))
         {
-            idSum += minRoundSpecs.id;
+            validGameIdsSum += minRoundSpecs.id;
         }
-        gameSetPowerSum += minRoundSpecs.red * minRoundSpecs.green * minRoundSpecs.blue;
+        gameSetsPowerSum += minRoundSpecs.red * minRoundSpecs.green * minRoundSpecs.blue;
     });
     
-    console.log( "first Q answer: " + idSum + "; second Q answer: " + gameSetPowerSum );
+    console.log( "first Q answer: " + validGameIdsSum + "; second Q answer: " + gameSetsPowerSum );
 }
