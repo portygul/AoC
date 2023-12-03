@@ -8,8 +8,8 @@ let partNumbersSum: number = 0;
 let gearRatioSum: number = 0;
 const notNumberNotDotRegEx: RegExp = /[^0-9.]/;
 
-fillCharTrackerMatrix( lines );
-calculateForElves( lines );
+fillCharTrackerMatrix();
+calculateForElves();
 
 function calculateForElves(): void
 {
