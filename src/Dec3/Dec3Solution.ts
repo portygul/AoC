@@ -39,6 +39,7 @@ function goFish( match: RegExpMatchArray, row: number ): void
         
         amITouchingASymbol = true;
     }
+    
     for( let i = startIndex; i <= endIndex; i++ )
     {
         const prevRow = row > 0 ? row - 1 : row;
@@ -59,7 +60,7 @@ function gearCheck( row : number, index: number, currNumber: number ): void
 {
     const currValue = charTrackerMatrix[ row ][ index ];
 
-    if( currValue> 0 )
+    if( currValue > 0 )
     {
         if( currValue > 1 ) 
         {
@@ -74,11 +75,13 @@ function fillCharTrackerMatrix(): void
     for( let i = 0; i < lines.length; i++ )
     {  
         charTrackerMatrix[ i ] = [ ...lines[ i ] ].map(( char ) => {
+
             if( notNumberNotDotRegEx.test( char ) )
             {
                 return char === '*' ? 1 : -1;
             }
             return 0;
+
         });
     }
 }
