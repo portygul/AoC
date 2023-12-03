@@ -1,17 +1,17 @@
 import { numberRegex } from "../Reuseable/types.ts";
 import { readLines } from "../Reuseable/utils.ts";
 
-const sampleLines: string[] = await readLines( 'SampleInput.txt' );
+const lines: string[] = await readLines( 'InputPath.txt' );
 const charTrackerMatrix: number[][] = [];
 
 let partNumbersSum: number = 0;
 let gearRatioSum: number = 0;
 const notNumberNotDotRegEx: RegExp = /[^0-9.]/;
 
-fillCharTrackerMatrix( sampleLines );
-calculateForElves( sampleLines );
+fillCharTrackerMatrix( lines );
+calculateForElves( lines );
 
-function calculateForElves( lines: string[] ): void
+function calculateForElves(): void
 {
     for( let i = 0; i < lines.length; i++ )
     {  
@@ -69,7 +69,7 @@ function gearCheck( row : number, index: number, currNumber: number ): void
     }
 }
 
-function fillCharTrackerMatrix(lines: string[]): void 
+function fillCharTrackerMatrix(): void 
 {
     for( let i = 0; i < lines.length; i++ )
     {  
