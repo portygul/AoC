@@ -8,7 +8,7 @@ let partNumbersSum: number = 0;
 let gearRatioSum: number = 0;
 const notNumberNotDotRegEx: RegExp = /[^0-9.]/;
 
-fillSpecialCharMatrix( sampleLines );
+fillCharTrackerMatrix( sampleLines );
 calculateForElves( sampleLines );
 
 function calculateForElves( lines: string[] ): void
@@ -69,7 +69,7 @@ function gearCheck( row : number, index: number, currNumber: number ): void
     }
 }
 
-function fillSpecialCharMatrix(lines: string[]): void 
+function fillCharTrackerMatrix(lines: string[]): void 
 {
     for( let i = 0; i < lines.length; i++ )
     {  
