@@ -1,7 +1,13 @@
-import { BallGameMinSpecs, numberRegex, wordRegex } from "../Reuseable/types.ts";
+import { numberRegex, wordRegex } from "../Reuseable/types.ts";
 import { readLines } from "../Reuseable/utils.ts";
 
 const inputLines: string[] = await readLines( 'InputPath.txt' );
+export interface BallGameMinSpecs {
+    id: number,
+    red: number,
+    blue: number,
+    green: number
+};
 
 answerTheElf( inputLines, 12, 13, 14 );
 
