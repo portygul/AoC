@@ -1,5 +1,5 @@
-import { numberRegex, wordRegex } from "../Reuseable/types.ts";
-import { readLines } from "../Reuseable/utils.ts";
+import { numberRegex, wordRegex } from "../../Reuseable/types.ts";
+import { readLines } from "../../Reuseable/utils.ts";
 
 const inputLines: string[] = await readLines( 'InputPath.txt' );
 export interface BallGameMinSpecs {

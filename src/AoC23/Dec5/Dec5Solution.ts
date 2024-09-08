@@ -14,19 +14,23 @@ fillAlmanac();
 
 const seedsToPlant: number[] = fishOutNumbers( lines[ 0 ] );
 
-const locations: number[] = [];
+let location = Number.MAX_SAFE_INTEGER;
 
 // seedsToPlant.forEach( seedNr => locations.push(convertWithAlmanac( "seed", "location", seedNr ) ));
 
-console.log(seedsToPlant)
 for( let i = 0; i < seedsToPlant.length; i = i + 2 )
 {
-    for( let j = seedsToPlant[ i ]; j <= seedsToPlant[ i + 1 ]; j++ )
+    for( let j = seedsToPlant[ i ]; j < seedsToPlant[ i + 1 ] + seedsToPlant[ i ]; j++)
     {
-        locations.push( convertWithAlmanac( "seed", "location", j ));
+        const temp = convertWithAlmanac( "seed", "location", j );
+
+       if( temp < location )
+       {
+            location = temp;
+       }
     }
 }
-console.log( Math.min(...locations ));
+console.log( location );
 
 function fillAlmanac()
 {

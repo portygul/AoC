@@ -1,5 +1,5 @@
-import { DigitWithIndex, digitRegex, digitWordArray } from "../Reuseable/types.ts";
-import { readLines, sumUp } from "../Reuseable/utils.ts";
+import { DigitWithIndex, digitRegex, digitWordArray } from "../../Reuseable/types.ts";
+import { readLines, sumUp } from "../../Reuseable/utils.ts";
 
 // action
 
